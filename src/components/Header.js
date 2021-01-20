@@ -10,6 +10,7 @@ const Header = () => {
   const [value, setValue] = React.useState(0)
 
   const handleChange = (event, newValue) => {
+    console.log(newValue)
     setValue(newValue)
   }
 
@@ -28,7 +29,7 @@ const Header = () => {
     <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid item xs={12}>
-          <Paper className={classes.paper}>Hi, this is charles</Paper>
+          <Paper className={classes.paper}>Hi, this is Charles</Paper>
           <Tabs
             value={value}
             onChange={handleChange}
