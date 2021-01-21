@@ -8,14 +8,10 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import MailOutlineIcon from '@material-ui/icons/MailOutline'
 import { makeStyles, createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1,
     minHeight: '70vh',
-  },
-  paper: {
-    padding: theme.spacing(2),
-    backgroundColor: '#50C878',
   },
   label: {
     fontSize: '22px',
@@ -37,19 +33,19 @@ const theme = createMuiTheme()
 theme.typography= {
   h4: {
     fontFamily: 'Courier New',
-    fontSize: '0.6rem',
+    fontSize: '1.2rem',
     '@media (min-width:600px)': {
-      fontSize: '1.75rem',
+      fontSize: '1.5rem',
     },
     [theme.breakpoints.up('md')]: {
-      fontSize: '1.2rem',
+      fontSize: '1.8rem',
     },
   },
   h2: {
     fontFamily: 'Helvetica',
-    fontSize: '1.5rem',
+    fontSize: '1.6rem',
     '@media (min-width:600px)': {
-      fontSize: '1.8rem',
+      fontSize: '2.1rem',
     },
     [theme.breakpoints.up('md')]: {
       fontSize: '3.0rem',
@@ -57,12 +53,11 @@ theme.typography= {
   },
 }
 
-
 const Contact = ({ checked }) => {
   const classes = useStyles()
   return(
     <div className={classes.root}>
-      <Fade in={ () => (checked===3) } style={{ transitionDelay: '200ms' }}>
+      <Fade in={checked===3} style={{ transitionDelay: '200ms' }}>
         <Grid
           container
           spacing={2}

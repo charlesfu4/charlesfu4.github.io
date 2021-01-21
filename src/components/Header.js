@@ -6,15 +6,19 @@ import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 2,
+    flexGrow: 1,
     backgroundColor: '#81c784',
+    flex: '1 1 auto',
   },
   paper: {
     padding: theme.spacing(2),
     backgroundColor: '#50C878',
   },
   label: {
-    fontSize: '22px',
+    fontSize: '1.0rem',
+    '@media (min-width:600px)': {
+      fontSize: '1.5rem',
+    },
     fontFamily: 'Courier New',
     fontWeight: 'bold',
   },
@@ -26,8 +30,14 @@ const Header = ({ tabValue, handleChange }) => {
 
   return(
     <div className={classes.root}>
-      <Grid container spacing={3}>
-        <Grid item xs={12}>
+      <Grid container
+        spacing={2}
+        direction="column"
+        alignItems="center"
+        justify="center"
+        className={classes.container}
+      >
+        <Grid item>
           <Tabs
             value={tabValue}
             onChange={handleChange}

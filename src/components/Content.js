@@ -26,7 +26,7 @@ const Content = ({ tabValue }) => {
     console.log(value)
     switch(value){
     case 0:{
-      return <About className={classes.container} />
+      return <About className={classes.container} checked={tabValue} />
     }
     case 1:{
       return 'This is 1'
