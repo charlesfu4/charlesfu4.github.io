@@ -1,11 +1,7 @@
 import React from 'react'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
-import Box from '@material-ui/core/Box'
 import Fade from '@material-ui/core/Fade'
-import GitHubIcon from '@material-ui/icons/GitHub'
-import LinkedInIcon from '@material-ui/icons/LinkedIn'
-import MailOutlineIcon from '@material-ui/icons/MailOutline'
 import { makeStyles, createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 
 const useStyles = makeStyles(() => ({
@@ -40,8 +36,18 @@ theme.typography= {
       fontSize: '1.8rem',
     },
   },
+  h3: {
+    fontFamily: 'Courier New',
+    fontSize: '1.4rem',
+    '@media (min-width:600px)': {
+      fontSize: '1.7rem',
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '2.4rem',
+    },
+  },
   h2: {
-    fontFamily: 'Helvetica',
+    fontFamily: 'Courier New',
     fontSize: '1.6rem',
     '@media (min-width:600px)': {
       fontSize: '2.1rem',
@@ -56,60 +62,44 @@ const About = ({ checked }) => {
   const classes = useStyles()
   return(
     <div className={classes.root}>
-      <Fade in={!checked} style={{ transitionDelay: '200ms' }}>
-        <Grid
-          container
-          spacing={2}
-          direction="column"
-          alignItems="center"
-          justify="center"
-          className={classes.container}
-        >
+      <Grid
+        container
+        spacing={2}
+        direction="column"
+        alignItems="flex-start"
+        justify="center"
+        className={classes.container}
+      >
+        <Fade in={!checked} style={{ transitionDelay: '600ms' }}>
           <Grid item className={null}>
             <ThemeProvider theme={theme}>
-              <Typography variant="h2">Get in touch with me</Typography>
+              <Typography variant="h3">Hi,</Typography>
             </ThemeProvider>
           </Grid>
-          <Grid item xs={8} className={null}  style={{ textAlign: 'justify' }}>
+        </Fade>
+        <Fade in={!checked} style={{ transitionDelay: '1600ms' }}>
+          <Grid item xs={8} className={null}  style={{ textAlign: 'left' }}>
             <ThemeProvider theme={theme}>
-              <Typography variant="h4">I am currently based in Stockholm and work as a full-stack web developer in a start-up for Digital Footprints Decentralization. If you are also an enthusiast in Data Science or Software Engineering, please connect with me!</Typography>
+              <Typography variant="h2">This is Charles Fu.</Typography>
             </ThemeProvider>
           </Grid>
-          <Box p={10}>
-            <Grid
-              container
-              spacing={5}
-              direction="row"
-              alignItems="center"
-              justify="center"
-            >
-              <Grid item >
-                <GitHubIcon
-                  style={{ fontSize: 55 }}
-                  className={classes.clickableIcon}
-                  onClick={() =>  window.location.href='https://github.com/charlesfu4'}
-                ></GitHubIcon>
-              </Grid>
-              <Grid item >
-                <LinkedInIcon
-                  style={{ fontSize: 60 }}
-                  className={classes.clickableIcon}
-                  onClick={() =>  window.location.href='https://www.linkedin.com/in/chu-cheng-fu-053631148/'}
-                ></LinkedInIcon>
-              </Grid>
-              <Grid item >
-                <MailOutlineIcon
-                  style={{ fontSize: 60 }}
-                  className={classes.clickableIcon}
-                  onClick={() =>  window.location.href='mailto:fuchucheng@gmail.com'}
-                >
-                </MailOutlineIcon>
-              </Grid>
-            </Grid>
-          </Box>
-        </Grid>
+        </Fade>
+        <Fade in={!checked} style={{ transitionDelay: '2500ms' }}>
+          <Grid item xs={8} className={null}  style={{ textAlign: 'left' }}>
+            <ThemeProvider theme={theme}>
+              <Typography variant="h3">I am an enthusiast in Data Science and Software Development.</Typography>
+            </ThemeProvider>
+          </Grid>
+        </Fade>
+        <Fade in={!checked} style={{ transitionDelay: '2500ms' }}>
+          <Grid item xs={8} className={null}  style={{ textAlign: 'left' }}>
+            <ThemeProvider theme={theme}>
+              <Typography variant="h4">My experience covers Machine Learning, Big Data Engineering, and Web Development.</Typography>
+            </ThemeProvider>
+          </Grid>
+        </Fade>
+      </Grid>
 
-      </Fade>
     </div>
   )
 }

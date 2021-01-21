@@ -31,13 +31,15 @@ const Header = ({ tabValue, handleChange }) => {
   return(
     <div className={classes.root}>
       <Grid container
-        spacing={2}
-        direction="column"
+        direction="row"
         alignItems="center"
         justify="center"
         className={classes.container}
       >
-        <Grid item>
+        <Grid container
+          alignItems="center"
+          justify="center"
+        >
           <Tabs
             value={tabValue}
             onChange={handleChange}

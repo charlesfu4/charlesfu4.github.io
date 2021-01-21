@@ -57,10 +57,10 @@ const Contact = ({ checked }) => {
   const classes = useStyles()
   return(
     <div className={classes.root}>
-      <Fade in={checked===3} style={{ transitionDelay: '200ms' }}>
+      <Fade in={checked===3} style={{ transitionDelay: '300ms' }}>
         <Grid
           container
-          spacing={2}
+          spacing={6}
           direction="column"
           alignItems="center"
           justify="center"
@@ -71,7 +71,7 @@ const Contact = ({ checked }) => {
               <Typography variant="h2">Get in touch with me</Typography>
             </ThemeProvider>
           </Grid>
-          <Grid item xs={8} className={null}  style={{ textAlign: 'justify' }}>
+          <Grid item xs={8} className={null}  style={{ textAlign: 'left' }}>
             <ThemeProvider theme={theme}>
               <Typography variant="h4">I am currently based in Stockholm and work as a full-stack web developer in a start-up for Digital Footprints Decentralization. If you are also an enthusiast in Data Science or Software Engineering, please connect with me!</Typography>
             </ThemeProvider>
