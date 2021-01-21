@@ -3,6 +3,7 @@ import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
 import About from './About'
 import Contact from './Contact'
+import Resume from './Resume'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,7 +33,7 @@ const Content = ({ tabValue }) => {
       return 'This is 1'
     }
     case 2:{
-      return 'This is 2'
+      return <Resume className={classes.container} checked={tabValue} />
     }
     case 3:{
       return <Contact className={classes.container} checked={tabValue} />

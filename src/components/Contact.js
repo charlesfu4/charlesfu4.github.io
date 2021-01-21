@@ -19,7 +19,7 @@ const useStyles = makeStyles(() => ({
     fontWeight: 'bold',
   },
   container: {
-    minHeight: '65vh',
+    minHeight: '100vh',
   },
   clickableIcon: {
     '&:hover': {
@@ -57,26 +57,30 @@ const Contact = ({ checked }) => {
   const classes = useStyles()
   return(
     <div className={classes.root}>
-      <Fade in={checked===3} style={{ transitionDelay: '300ms' }}>
-        <Grid
-          container
-          spacing={6}
-          direction="column"
-          alignItems="center"
-          justify="center"
-          className={classes.container}
-        >
+      <Grid
+        container
+        spacing={6}
+        direction="column"
+        alignItems="center"
+        justify="center"
+        className={classes.container}
+      >
+        <Fade in={checked===3} style={{ transitionDelay: '500ms' }} timeout={800}>
           <Grid item className={null}>
             <ThemeProvider theme={theme}>
               <Typography variant="h2">Get in touch with me</Typography>
             </ThemeProvider>
           </Grid>
+        </Fade>
+        <Fade in={checked===3} style={{ transitionDelay: '2000ms' }} timeout={3500}>
           <Grid item xs={8} className={null}  style={{ textAlign: 'left' }}>
             <ThemeProvider theme={theme}>
               <Typography variant="h4">I am currently based in Stockholm and work as a full-stack web developer in a start-up for Digital Footprints Decentralization. If you are also an enthusiast in Data Science or Software Engineering, please connect with me!</Typography>
             </ThemeProvider>
           </Grid>
-          <Box p={10}>
+        </Fade>
+        <Box p={10}>
+          <Fade in={checked===3} style={{ transitionDelay: '1500ms' }} timeout={2000}>
             <Grid
               container
               spacing={5}
@@ -107,10 +111,10 @@ const Contact = ({ checked }) => {
                 </MailOutlineIcon>
               </Grid>
             </Grid>
-          </Box>
-        </Grid>
+          </Fade>
+        </Box>
+      </Grid>
 
-      </Fade>
     </div>
   )
 }
