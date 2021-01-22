@@ -2,6 +2,7 @@ import React from 'react'
 import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
 import Box from '@material-ui/core/Box'
+import Fade from '@material-ui/core/Fade'
 import Typography from '@material-ui/core/Typography'
 import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles'
 
@@ -55,9 +56,9 @@ const theme = createMuiTheme()
 theme.typography= {
   h4: {
     fontFamily: 'Courier New',
-    fontSize: '1.0rem',
+    fontSize: '0.9rem',
     '@media (min-width:600px)': {
-      fontSize: '1.0rem',
+      fontSize: '0.9rem',
     },
     [theme.breakpoints.up('md')]: {
       fontSize: '1.8rem',
@@ -76,82 +77,85 @@ theme.typography= {
 }
 
 
-const Resume = () => {
+const Resume = ({ checked }) => {
   const classes = useStyles()
   return(
     <div className={classes.root}>
-      <Grid
-        container
-        spacing={2}
-        direction='column'
-        alignItems='center'
-        justify='center'
-        className={classes.container}
-      >
-        <ColorButton
-          variant='contained'
-          color='primary'
-          href='https://github.com/charlesfu4/charlesfu4.github.io/raw/main/cv/Chu_Cheng_CV.pdf'
-          className={classes.margin}
-        >
-          Download pdf file
-        </ColorButton>
-      </Grid>
-      <Grid
-        container
-        direction="row"
-        alignContent="center"
-        alignItems="center"
-        wrap="wrap"
-        className={classes.container}
-        spacing={2}
-      >
-        <Grid item xs={4} style={{ textAlign: 'center' }} >
-          <Box
-            m={2}
-            p={1}
-            width='80%'
-            border={3}
-            borderColor="text.primary"
-            borderRadius={16}
-            className={classes.hoverbox}
+      <Fade in={checked===2} style={{ transitionDelay: '300ms' }} timeout={300}>
+        <Box p={4} m={0}>
+          <Grid
+            container
+            spacing={2}
+            direction='column'
+            alignItems='center'
+            justify='center'
+            className={classes.container}
           >
-            <ThemeProvider theme={theme}>
-              <Typography variant="h4">Education</Typography>
-            </ThemeProvider>
+            <ColorButton
+              variant='contained'
+              color='primary'
+              href='https://github.com/charlesfu4/charlesfu4.github.io/raw/main/cv/Chu_Cheng_CV.pdf'
+              className={classes.margin}
+            >
+              Download pdf file
+            </ColorButton>
+          </Grid>
+          <Box p={1}>
+            <Grid
+              container
+              direction="row"
+              alignContent="center"
+              alignItems="center"
+              wrap="wrap"
+              className={classes.container}
+              spacing={2}
+            >
+              <Grid item xs={4} style={{ textAlign: 'center' }} >
+                <Box
+                  p={1}
+                  width='80%'
+                  border={3}
+                  borderColor="text.primary"
+                  borderRadius={16}
+                  className={classes.hoverbox}
+                >
+                  <ThemeProvider theme={theme}>
+                    <Typography variant="h4">Education</Typography>
+                  </ThemeProvider>
+                </Box>
+              </Grid>
+              <Grid item xs={4} style={{ textAlign: 'center' }} >
+                <Box
+                  p={1}
+                  width='80%'
+                  border={3}
+                  borderColor="text.primary"
+                  borderRadius={16}
+                  className={classes.hoverbox}
+                >
+                  <ThemeProvider theme={theme}>
+                    <Typography variant="h4">Experience</Typography>
+                  </ThemeProvider>
+                </Box>
+              </Grid>
+              <Grid item xs={4} style={{ textAlign: 'center' }} >
+                <Box
+                  p={1}
+                  width='80%'
+                  border={3}
+                  borderColor="text.primary"
+                  borderRadius={16}
+                  className={classes.hoverbox}
+                >
+                  <ThemeProvider theme={theme}>
+                    <Typography variant="h4">Skills</Typography>
+                  </ThemeProvider>
+                </Box>
+              </Grid>
+            </Grid>
           </Box>
-        </Grid>
-        <Grid item xs={4} style={{ textAlign: 'center' }} >
-          <Box
-            m={2}
-            p={1}
-            width='80%'
-            border={3}
-            borderColor="text.primary"
-            borderRadius={16}
-            className={classes.hoverbox}
-          >
-            <ThemeProvider theme={theme}>
-              <Typography variant="h4">Experience</Typography>
-            </ThemeProvider>
-          </Box>
-        </Grid>
-        <Grid item xs={4} style={{ textAlign: 'center' }} >
-          <Box
-            m={2}
-            p={1}
-            width='80%'
-            border={3}
-            borderColor="text.primary"
-            borderRadius={16}
-            className={classes.hoverbox}
-          >
-            <ThemeProvider theme={theme}>
-              <Typography variant="h4">Skills</Typography>
-            </ThemeProvider>
-          </Box>
-        </Grid>
-      </Grid>
+        </Box>
+      </Fade>
     </div>
   )
 }

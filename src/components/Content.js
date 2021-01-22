@@ -5,6 +5,7 @@ import About from '../pages/About'
 import Contact from '../pages/Contact'
 import Resume from '../pages/Resume'
 import Projects from '../pages/Projects'
+import Footer from './Footer'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -45,9 +46,12 @@ const Content = ({ tabValue }) => {
   }
 
   return(
-    <Grid container className={classes.root} justify='center'>
-      {threeCases(tabValue)}
-    </Grid>
+    <div>
+      <Grid container className={classes.root} justify='center'>
+        {threeCases(tabValue)}
+      </Grid>
+      <Footer />
+    </div>
   )
 }
 

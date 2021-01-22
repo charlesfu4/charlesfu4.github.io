@@ -80,7 +80,7 @@ const About = ({ checked }) => {
             </Grid>
           </Fade>
           <Fade in={!checked} style={{ transitionDelay: '1000ms' }} timeout={1400}>
-            <Grid item xs={8} className={null}  style={{ textAlign: 'left' }}>
+            <Grid item className={null}  style={{ textAlign: 'left' }}>
               <ThemeProvider theme={theme}>
                 <Typography variant="h2">My name is Charles Fu.</Typography>
               </ThemeProvider>

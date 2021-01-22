@@ -40,9 +40,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#50C878',
   },
   label: {
-    fontSize: '1.0rem',
+    fontSize: '0.9rem',
     '@media (min-width:600px)': {
-      fontSize: '1.5rem',
+      fontSize: '1.6rem',
     },
     fontFamily: 'Courier New',
     fontWeight: 'bold',
