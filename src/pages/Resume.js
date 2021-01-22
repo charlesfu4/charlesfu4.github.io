@@ -55,9 +55,9 @@ const theme = createMuiTheme()
 theme.typography= {
   h4: {
     fontFamily: 'Courier New',
-    fontSize: '1.2rem',
+    fontSize: '1.0rem',
     '@media (min-width:600px)': {
-      fontSize: '1.5rem',
+      fontSize: '1.0rem',
     },
     [theme.breakpoints.up('md')]: {
       fontSize: '1.8rem',
@@ -82,7 +82,7 @@ const Resume = () => {
     <div className={classes.root}>
       <Grid
         container
-        spacing={4}
+        spacing={2}
         direction='column'
         alignItems='center'
         justify='center'
@@ -97,63 +97,61 @@ const Resume = () => {
           Download pdf file
         </ColorButton>
       </Grid>
-      <Box p={4}>
-        <Grid
-          container
-          direction="row"
-          alignContent="center"
-          alignItems="center"
-          wrap="wrap"
-          className={classes.container}
-          spacing={6}
-        >
-          <Grid item xs={4} className={classes.items} style={{ textAlign: 'center' }} >
-            <Box
-              p={3}
-              m={2}
-              width='80%'
-              border={3}
-              borderColor="text.primary"
-              borderRadius={16}
-              className={classes.hoverbox}
-            >
-              <ThemeProvider theme={theme}>
-                <Typography variant="h2">Education</Typography>
-              </ThemeProvider>
-            </Box>
-          </Grid>
-          <Grid item xs={4} className={classes.items} style={{ textAlign: 'center' }} >
-            <Box
-              p={3}
-              m={2}
-              width='80%'
-              border={3}
-              borderColor="text.primary"
-              borderRadius={16}
-              className={classes.hoverbox}
-            >
-              <ThemeProvider theme={theme}>
-                <Typography variant="h2">Experience</Typography>
-              </ThemeProvider>
-            </Box>
-          </Grid>
-          <Grid item xs={4} className={classes.items} style={{ textAlign: 'center' }} >
-            <Box
-              p={3}
-              m={2}
-              width='80%'
-              border={3}
-              borderColor="text.primary"
-              borderRadius={16}
-              className={classes.hoverbox}
-            >
-              <ThemeProvider theme={theme}>
-                <Typography variant="h2">Skills</Typography>
-              </ThemeProvider>
-            </Box>
-          </Grid>
+      <Grid
+        container
+        direction="row"
+        alignContent="center"
+        alignItems="center"
+        wrap="wrap"
+        className={classes.container}
+        spacing={2}
+      >
+        <Grid item xs={4} style={{ textAlign: 'center' }} >
+          <Box
+            m={2}
+            p={1}
+            width='80%'
+            border={3}
+            borderColor="text.primary"
+            borderRadius={16}
+            className={classes.hoverbox}
+          >
+            <ThemeProvider theme={theme}>
+              <Typography variant="h4">Education</Typography>
+            </ThemeProvider>
+          </Box>
         </Grid>
-      </Box>
+        <Grid item xs={4} style={{ textAlign: 'center' }} >
+          <Box
+            m={2}
+            p={1}
+            width='80%'
+            border={3}
+            borderColor="text.primary"
+            borderRadius={16}
+            className={classes.hoverbox}
+          >
+            <ThemeProvider theme={theme}>
+              <Typography variant="h4">Experience</Typography>
+            </ThemeProvider>
+          </Box>
+        </Grid>
+        <Grid item xs={4} style={{ textAlign: 'center' }} >
+          <Box
+            m={2}
+            p={1}
+            width='80%'
+            border={3}
+            borderColor="text.primary"
+            borderRadius={16}
+            className={classes.hoverbox}
+          >
+            <ThemeProvider theme={theme}>
+              <Typography variant="h4">Skills</Typography>
+            </ThemeProvider>
+          </Box>
+        </Grid>
+      </Grid>
     </div>
   )
 }

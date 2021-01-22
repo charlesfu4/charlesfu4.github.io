@@ -29,9 +29,9 @@ const theme = createMuiTheme()
 theme.typography= {
   h4: {
     fontFamily: 'Courier New',
-    fontSize: '1.2rem',
+    fontSize: '1.0rem',
     '@media (min-width:600px)': {
-      fontSize: '1.5rem',
+      fontSize: '1.0rem',
     },
     [theme.breakpoints.up('md')]: {
       fontSize: '1.8rem',
@@ -69,7 +69,7 @@ const Projects = () => {
               <Typography variant="h2">Academic</Typography>
             </ThemeProvider>
           </Grid>
-          <Grid item xs={6} className={classes.items} style={{ textAlign: 'center' }} >
+          <Grid item xs={5} className={classes.items} style={{ textAlign: 'center' }} >
             <ThemeProvider theme={theme}>
               <Typography variant="h2">Self-study</Typography>
             </ThemeProvider>
@@ -86,13 +86,8 @@ const Projects = () => {
         >
           <Grid
             xs={6}
-            container
-            direction="column"
-            alignContent="center"
-            alignItems="center"
-            wrap="wrap"
+            item
             className={classes.container}
-            spacing={0}
           >
             <Box
               m={1}
@@ -102,7 +97,7 @@ const Projects = () => {
               borderRadius={16}
               className={classes.hoverbox}
             >
-              <Grid item xs={0} className={classes.items} style={{ textAlign: 'left' }} >
+              <Grid item className={classes.items} style={{ textAlign: 'left' }} >
                 <Box p={2}>
                   <ThemeProvider theme={theme}>
                     <Typography variant="h4">Master Thesis: Automated Machine Learning for Energy Forecasting</Typography>
@@ -118,7 +113,7 @@ const Projects = () => {
               borderRadius={16}
               className={classes.hoverbox}
             >
-              <Grid container alignContent='center' xs={0}  style={{ textAlign: 'left' }} >
+              <Grid container alignContent='center' style={{ textAlign: 'left' }} >
                 <Box p={2}>
                   <ThemeProvider theme={theme}>
                     <Typography variant="h4">Big data analytics programming</Typography>
@@ -134,7 +129,7 @@ const Projects = () => {
               borderRadius={16}
               className={classes.hoverbox}
             >
-              <Grid item xs={0} className={classes.items} style={{ textAlign: 'left' }} >
+              <Grid item className={classes.items} style={{ textAlign: 'left' }} >
                 <Box p={2}>
                   <ThemeProvider theme={theme}>
                     <Typography variant="h4">Super convergence in Convolutional Neural Network</Typography>
@@ -150,7 +145,7 @@ const Projects = () => {
               borderRadius={16}
               className={classes.hoverbox}
             >
-              <Grid item xs={0} className={classes.items} style={{ textAlign: 'left' }} >
+              <Grid item className={classes.items} style={{ textAlign: 'left' }} >
                 <Box p={2}>
                   <ThemeProvider theme={theme}>
                     <Typography variant="h4">Anaylsis of Danish traffic network</Typography>
@@ -163,13 +158,8 @@ const Projects = () => {
 
           <Grid
             xs={6}
-            container
-            direction="column"
-            alignContent="center"
-            alignItems="center"
-            wrap="wrap"
+            item
             className={classes.container}
-            spacing={0}
           >
             <Box
               m={1}
@@ -179,7 +169,7 @@ const Projects = () => {
               borderRadius={16}
               className={classes.hoverbox}
             >
-              <Grid item xs={0} className={classes.items} style={{ textAlign: 'left' }} >
+              <Grid item className={classes.items} style={{ textAlign: 'left' }} >
                 <Box p={2}>
                   <ThemeProvider theme={theme}>
                     <Typography variant="h4">Full-stack open</Typography>
@@ -195,7 +185,7 @@ const Projects = () => {
               borderRadius={16}
               className={classes.hoverbox}
             >
-              <Grid container alignContent='center' xs={0}  style={{ textAlign: 'left' }} >
+              <Grid container alignContent='center' style={{ textAlign: 'left' }} >
                 <Box p={2}>
                   <ThemeProvider theme={theme}>
                     <Typography variant="h4">Algorithm, Priceton</Typography>
@@ -211,7 +201,7 @@ const Projects = () => {
               borderRadius={16}
               className={classes.hoverbox}
             >
-              <Grid item xs={0} className={classes.items} style={{ textAlign: 'left' }} >
+              <Grid item className={classes.items} style={{ textAlign: 'left' }} >
                 <Box p={2}>
                   <ThemeProvider theme={theme}>
                     <Typography variant="h4">Managing Big Data with MySQL</Typography>
