@@ -1,9 +1,10 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
-import About from './About'
-import Contact from './Contact'
-import Resume from './Resume'
+import About from '../pages/About'
+import Contact from '../pages/Contact'
+import Resume from '../pages/Resume'
+import Projects from '../pages/Projects'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,7 +31,7 @@ const Content = ({ tabValue }) => {
       return <About className={classes.container} checked={tabValue} />
     }
     case 1:{
-      return 'This is 1'
+      return <Projects className={classes.container} checked={tabValue} />
     }
     case 2:{
       return <Resume className={classes.container} checked={tabValue} />

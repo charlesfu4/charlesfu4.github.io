@@ -63,7 +63,7 @@ const About = ({ checked }) => {
   const classes = useStyles()
   return(
     <div className={classes.root}>
-      <Box m={5}>
+      <Box p={5} m={-2}>
         <Grid
           container
           spacing={3}
@@ -79,21 +79,21 @@ const About = ({ checked }) => {
               </ThemeProvider>
             </Grid>
           </Fade>
-          <Fade in={!checked} style={{ transitionDelay: '1600ms' }} timeout={2000}>
+          <Fade in={!checked} style={{ transitionDelay: '1000ms' }} timeout={1400}>
             <Grid item xs={8} className={null}  style={{ textAlign: 'left' }}>
               <ThemeProvider theme={theme}>
-                <Typography variant="h2">This is Charles Fu.</Typography>
+                <Typography variant="h2">My name is Charles Fu.</Typography>
               </ThemeProvider>
             </Grid>
           </Fade>
-          <Fade in={!checked} style={{ transitionDelay: '3000ms' }} timeout={3200}>
+          <Fade in={!checked} style={{ transitionDelay: '2000ms' }} timeout={2200}>
             <Grid item xs={12} className={null}  style={{ textAlign: 'left' }}>
               <ThemeProvider theme={theme}>
                 <Typography variant="h4">I am an enthusiast in Data Science and Software Development.</Typography>
               </ThemeProvider>
             </Grid>
           </Fade>
-          <Fade in={!checked} style={{ transitionDelay: '4500ms' }} timeout={4400}>
+          <Fade in={!checked} style={{ transitionDelay: '3000ms' }} timeout={3100}>
             <Grid item xs={12} className={null}  style={{ textAlign: 'left' }}>
               <ThemeProvider theme={theme}>
                 <Typography variant="h4">My experience covers Machine Learning, Big Data Engineering, and Web Development.</Typography>

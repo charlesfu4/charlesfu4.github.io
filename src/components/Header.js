@@ -2,7 +2,32 @@ import React from 'react'
 import Grid from '@material-ui/core/Grid'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles, withStyles } from '@material-ui/core/styles'
+
+
+const StyledTabs = withStyles({
+  indicator: {
+    display: 'flex',
+    justifyContent: 'center',
+    backgroundColor: 'transparent',
+    '& > span': {
+      maxWidth: 66,
+      width: '100%',
+      backgroundColor: '#000',
+    },
+  },
+})((props) => <Tabs {...props} TabIndicatorProps={{ children: <span /> }} />)
+
+const StyledTab = withStyles((theme) => ({
+  root: {
+    textTransform: 'none',
+    color: '#000',
+    marginRight: theme.spacing(1),
+    '&:focus': {
+      opacity: 5,
+    },
+  },
+}))((props) => <Tab disableRipple {...props} />)
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -40,18 +65,16 @@ const Header = ({ tabValue, handleChange }) => {
           alignItems="center"
           justify="center"
         >
-          <Tabs
+          <StyledTabs
             value={tabValue}
             onChange={handleChange}
-            indicatorColor="primary"
-            textColor="primary"
             centered
           >
-            <Tab className={classes.label} label="About" />
-            <Tab className={classes.label} label="Projects" />
-            <Tab className={classes.label} label="Resume" />
-            <Tab className={classes.label} label="Contact" />
-          </Tabs>
+            <StyledTab className={classes.label} label="About" />
+            <StyledTab className={classes.label} label="Projects" />
+            <StyledTab className={classes.label} label="Resume" />
+            <StyledTab className={classes.label} label="Contact" />
+          </StyledTabs>
 
         </Grid>
       </Grid>
