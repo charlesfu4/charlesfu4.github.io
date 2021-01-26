@@ -31,7 +31,7 @@ const useStyles = makeStyles(() => ({
   },
   clickableIcon: {
     '&:hover': {
-      color: 'grey',
+      color: '#B9E97C',
       cursor: 'pointer'
     },
   },
@@ -42,12 +42,12 @@ const useStyles = makeStyles(() => ({
     fontWeight: 'bold',
     color: '#81c784',
     '&:hover':{
-      color:'#F0EC15',
+      color:'#B9E97C',
     }
   },
   hoverbox:{
     '&:hover':{
-      backgroundColor: '#F866C7',
+      backgroundColor: '#B9E97C',
       cursor: 'pointer',
     }
   },

@@ -20,7 +20,7 @@ const useStyles = makeStyles(() => ({
   },
   hoverbox:{
     '&:hover':{
-      backgroundColor: '#F866C7',
+      backgroundColor: '#B9E97C',
       cursor: 'pointer',
     }
   },
