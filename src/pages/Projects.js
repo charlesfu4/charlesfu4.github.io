@@ -55,7 +55,7 @@ const Projects = ({ checked }) => {
 
   return (
     <div className={classes.root}>
-      <Fade in={checked===1} style={{ transitionDelay: '300ms' }} timeout={300}>
+      <Fade in={checked} style={{ transitionDelay: '300ms' }} timeout={300}>
         <Box p={4} m={0}>
           <Grid
             container

@@ -2,6 +2,7 @@ import React from 'react'
 import Grid from '@material-ui/core/Grid'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
+import { Link } from 'react-router-dom'
 import { makeStyles, withStyles } from '@material-ui/core/styles'
 
 
@@ -70,10 +71,10 @@ const Header = ({ tabValue, handleChange }) => {
             onChange={handleChange}
             centered
           >
-            <StyledTab className={classes.label} label="About" />
-            <StyledTab className={classes.label} label="Projects" />
-            <StyledTab className={classes.label} label="Resume" />
-            <StyledTab className={classes.label} label="Contact" />
+            <StyledTab component={Link} className={classes.label} label="About" to="/" />
+            <StyledTab component={Link} className={classes.label} label="Projects" to="/projects" />
+            <StyledTab component={Link} className={classes.label} label="Resume" to="/resume" />
+            <StyledTab component={Link} className={classes.label} label="Contact" to="/contact" />
           </StyledTabs>
 
         </Grid>

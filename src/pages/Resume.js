@@ -81,7 +81,7 @@ const Resume = ({ checked }) => {
   const classes = useStyles()
   return(
     <div className={classes.root}>
-      <Fade in={checked===2} style={{ transitionDelay: '300ms' }} timeout={300}>
+      <Fade in={checked} style={{ transitionDelay: '300ms' }} timeout={300}>
         <Box p={4} m={0}>
           <Grid
             container

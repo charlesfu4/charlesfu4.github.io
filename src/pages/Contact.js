@@ -65,14 +65,14 @@ const Contact = ({ checked }) => {
         justify="center"
         className={classes.container}
       >
-        <Fade in={checked===3} style={{ transitionDelay: '500ms' }} timeout={800}>
+        <Fade in={checked} style={{ transitionDelay: '500ms' }} timeout={800}>
           <Grid item className={null}>
             <ThemeProvider theme={theme}>
               <Typography variant="h2">Get in touch with me</Typography>
             </ThemeProvider>
           </Grid>
         </Fade>
-        <Fade in={checked===3} style={{ transitionDelay: '1500ms' }} timeout={2000}>
+        <Fade in={checked} style={{ transitionDelay: '1500ms' }} timeout={2000}>
           <Grid item xs={8} className={null}  style={{ textAlign: 'left' }}>
             <ThemeProvider theme={theme}>
               <Typography variant="h4">I am currently based in Stockholm and about to work as a full-stack web developer in a start-up for Digital Footprints Decentralization. If you are also an enthusiast in Data Science or Software Engineering, please connect with me!</Typography>
@@ -80,7 +80,7 @@ const Contact = ({ checked }) => {
           </Grid>
         </Fade>
         <Box p={10}>
-          <Fade in={checked===3} style={{ transitionDelay: '1000ms' }} timeout={1500}>
+          <Fade in={checked} style={{ transitionDelay: '1000ms' }} timeout={1500}>
             <Grid
               container
               spacing={5}

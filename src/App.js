@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Header from './components/Header'
 import Content from './components/Content'
 import { makeStyles } from '@material-ui/core/styles'
+import Footer from './components/Footer'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,8 +31,9 @@ const App = () => {
 
   return(
     <div className={classes.root}>
-      <Header tabValue={tabVal} handleChange={handleChange}></Header>
-      <Content tabValue={tabVal}></Content>
+      <Header tabValue={tabVal} handleChange={handleChange} />
+      <Content />
+      <Footer />
     </div>
   )
 }

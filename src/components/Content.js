@@ -5,7 +5,10 @@ import About from '../pages/About'
 import Contact from '../pages/Contact'
 import Resume from '../pages/Resume'
 import Projects from '../pages/Projects'
-import Footer from './Footer'
+import {
+  Switch,
+  Route,
+} from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,35 +25,27 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const Content = ({ tabValue }) => {
+const Content = () => {
   const classes = useStyles()
-
-  const threeCases = (value) => {
-    console.log(value)
-    switch(value){
-    case 0:{
-      return <About className={classes.container} checked={tabValue} />
-    }
-    case 1:{
-      return <Projects className={classes.container} checked={tabValue} />
-    }
-    case 2:{
-      return <Resume className={classes.container} checked={tabValue} />
-    }
-    case 3:{
-      return <Contact className={classes.container} checked={tabValue} />
-    }
-    default:
-      return 'This is 0'
-    }
-  }
 
   return(
     <div>
       <Grid container className={classes.root} justify='center'>
-        {threeCases(tabValue)}
+        <Switch>
+          <Route path='/projects'>
+            <Projects checked={true}/>
+          </Route>
+          <Route path='/resume'>
+            <Resume checked={true} />
+          </Route>
+          <Route path='/contact'>
+            <Contact checked={true} />
+          </Route>
+          <Route path='/'>
+            <About checked={true} />
+          </Route>
+        </Switch>
       </Grid>
-      <Footer />
     </div>
   )
 }
