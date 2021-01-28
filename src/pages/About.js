@@ -28,33 +28,51 @@ const useStyles = makeStyles(() => ({
 const theme = createMuiTheme()
 theme.typography= {
   h4: {
-    fontFamily: 'Courier New',
-    fontSize: '1.2rem',
-    '@media (min-width:600px)': {
-      fontSize: '1.5rem',
+    fontFamily: 'Courier Prime',
+    fontSize: '0.8rem',
+    '@media (min-width:384px)': {
+      fontSize: '1.0rem',
     },
-    [theme.breakpoints.up('md')]: {
-      fontSize: '1.8rem',
+    '@media (min-width:576px)': {
+      fontSize: '1.2rem',
+    },
+    '@media (min-width:768px)': {
+      fontSize: '1.4rem',
+    },
+    '@media (min-width:960px)': {
+      fontSize: '1.6rem',
+    },
+  },
+  h2: {
+    fontFamily: 'Courier Prime',
+    fontSize: '1.1rem',
+    '@media (min-width:384px)': {
+      fontSize: '1.6rem',
+    },
+    '@media (min-width:576px)': {
+      fontSize: '2.0rem',
+    },
+    '@media (min-width:768px)': {
+      fontSize: '2.4rem',
+    },
+    '@media (min-width:960px)': {
+      fontSize: '2.8rem',
     },
   },
   h3: {
     fontFamily: 'Courier New',
-    fontSize: '1.4rem',
-    '@media (min-width:600px)': {
+    fontSize: '0.95rem',
+    '@media (min-width:384px)': {
+      fontSize: '1.3rem',
+    },
+    '@media (min-width:576px)': {
       fontSize: '1.7rem',
     },
-    [theme.breakpoints.up('md')]: {
-      fontSize: '2.4rem',
+    '@media (min-width:768px)': {
+      fontSize: '2.0rem',
     },
-  },
-  h2: {
-    fontFamily: 'Courier New',
-    fontSize: '1.6rem',
-    '@media (min-width:600px)': {
-      fontSize: '2.1rem',
-    },
-    [theme.breakpoints.up('md')]: {
-      fontSize: '3.0rem',
+    '@media (min-width:960px)': {
+      fontSize: '2.2rem',
     },
   },
 }

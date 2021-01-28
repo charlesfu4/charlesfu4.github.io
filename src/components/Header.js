@@ -17,7 +17,7 @@ const StyledTabs = withStyles({
       backgroundColor: '#000',
     },
   },
-})((props) => <Tabs {...props} TabIndicatorProps={{ children: <span /> }} />)
+})((props) => <Tabs {...props} variant='scrollable' TabIndicatorProps={{ children: <span /> }} />)
 
 const StyledTab = withStyles((theme) => ({
   root: {
@@ -41,8 +41,17 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#50C878',
   },
   label: {
-    fontSize: '0.9rem',
-    '@media (min-width:600px)': {
+    fontSize: '0.8rem',
+    '@media (min-width:384px)': {
+      fontSize: '1.0rem',
+    },
+    '@media (min-width:576px)': {
+      fontSize: '1.2rem',
+    },
+    '@media (min-width:768px)': {
+      fontSize: '1.4rem',
+    },
+    '@media (min-width:960px)': {
       fontSize: '1.6rem',
     },
     fontFamily: 'Courier New',
@@ -69,7 +78,6 @@ const Header = ({ tabValue, handleChange }) => {
           <StyledTabs
             value={tabValue}
             onChange={handleChange}
-            centered
           >
             <StyledTab component={Link} className={classes.label} label="About" to="/" />
             <StyledTab component={Link} className={classes.label} label="Projects" to="/projects" />

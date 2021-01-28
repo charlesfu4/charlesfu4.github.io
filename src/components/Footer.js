@@ -3,23 +3,11 @@ import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles, createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1,
     backgroundColor: '#81c784',
     flex: '1 1 auto',
-  },
-  paper: {
-    padding: theme.spacing(2),
-    backgroundColor: '#50C878',
-  },
-  label: {
-    fontSize: '0.9rem',
-    '@media (min-width:600px)': {
-      fontSize: '0.9rem',
-    },
-    fontFamily: 'Courier New',
-    fontWeight: 'bold',
   },
   container:{
     position: 'absolute',
@@ -32,22 +20,18 @@ const theme = createMuiTheme()
 theme.typography= {
   h6: {
     fontFamily: 'Courier New',
-    fontSize: '0.6rem',
-    '@media (min-width:600px)': {
+    fontSize: '0.1rem',
+    '@media (min-width:384px)': {
+      fontSize: '0.3rem',
+    },
+    '@media (min-width:576px)': {
+      fontSize: '0.5rem',
+    },
+    '@media (min-width:768px)': {
       fontSize: '0.6rem',
     },
-    [theme.breakpoints.up('md')]: {
-      fontSize: '0.8rem',
-    },
-  },
-  h2: {
-    fontFamily: 'Helvetica',
-    fontSize: '1.6rem',
-    '@media (min-width:600px)': {
-      fontSize: '2.1rem',
-    },
-    [theme.breakpoints.up('md')]: {
-      fontSize: '3.0rem',
+    '@media (min-width:960px)': {
+      fontSize: '0.7rem',
     },
   },
 }

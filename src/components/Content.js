@@ -10,15 +10,9 @@ import {
   Route,
 } from 'react-router-dom'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
-    flexGrow: 1,
     backgroundColor: '#81c784',
-    flex: '1 1 auto',
-  },
-  paper: {
-    padding: theme.spacing(2),
-    backgroundColor: '#50C878',
   },
   container:{
     minHeight: '60vh'
@@ -29,8 +23,8 @@ const Content = () => {
   const classes = useStyles()
 
   return(
-    <div>
-      <Grid container className={classes.root} justify='center'>
+    <div className={classes.root}>
+      <Grid container className={classes.container} justify='center'>
         <Switch>
           <Route path='/projects'>
             <Projects checked={true}/>
