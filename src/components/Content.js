@@ -12,7 +12,9 @@ import {
 
 const useStyles = makeStyles(() => ({
   root: {
+    flexGrow: 1,
     backgroundColor: '#81c784',
+    flex: '1 1 auto',
   },
   container:{
     minHeight: '60vh'

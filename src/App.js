@@ -5,14 +5,10 @@ import { makeStyles } from '@material-ui/core/styles'
 import { Container } from '@material-ui/core'
 import Footer from './components/Footer'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     height: '100vh',
     backgroundColor: '#81c784',
-  },
-  paper: {
-    padding: theme.spacing(2),
-    backgroundColor: '#50C878',
   },
   label: {
     fontSize: '22px',
@@ -31,7 +27,7 @@ const App = () => {
   const classes = useStyles()
 
   return(
-    <Container className={classes.root}>
+    <Container className={classes.root} maxWidth={false}>
       <Header tabValue={tabVal} handleChange={handleChange} />
       <Content />
       <Footer />
