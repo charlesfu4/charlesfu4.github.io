@@ -103,7 +103,7 @@ const Contact = ({ checked }) => {
         <Fade in={checked} style={{ transitionDelay: '1500ms' }} timeout={2000}>
           <Grid item xs={8} className={null}  style={{ textAlign: 'left' }}>
             <ThemeProvider theme={theme}>
-              <Typography variant="h4">I am currently based in Stockholm and about to work as a full-stack web developer in a start-up for Digital Footprints Decentralization. If you are also an enthusiast in Data Science or Software Engineering, please connect with me!</Typography>
+              <Typography variant="h4">I am currently based in Stockholm and work as a full-stack web developer in a start-up for Digital Footprints Decentralization. If you are also an enthusiast in Data Science or Software Engineering, please connect with me!</Typography>
             </ThemeProvider>
           </Grid>
         </Fade>
