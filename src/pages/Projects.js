@@ -84,12 +84,12 @@ const Projects = ({ checked }) => {
             className={classes.container}
             spacing={6}
           >
-            <Grid item xs={6} className={classes.items} style={{ textAlign: 'center' }} >
+            <Grid item xs={6} className={classes.items} align="center" >
               <ThemeProvider theme={theme}>
                 <Typography variant="h2">Academic</Typography>
               </ThemeProvider>
             </Grid>
-            <Grid item xs={5} className={classes.items} style={{ textAlign: 'center' }} >
+            <Grid item xs={5} className={classes.items} align="center" >
               <ThemeProvider theme={theme}>
                 <Typography variant="h2">Self-study</Typography>
               </ThemeProvider>
@@ -108,6 +108,7 @@ const Projects = ({ checked }) => {
               xs={6}
               item
               className={classes.container}
+              align="center"
             >
               <Box
                 m={1}
@@ -133,7 +134,7 @@ const Projects = ({ checked }) => {
                 borderRadius={16}
                 className={classes.hoverbox}
               >
-                <Grid container alignContent='center' style={{ textAlign: 'left' }} >
+                <Grid container alignContent='center' style={{ textAlign: 'left' }}>
                   <Box p={1}>
                     <ThemeProvider theme={theme}>
                       <Typography variant="h4">Big data analytics programming</Typography>
@@ -180,6 +181,7 @@ const Projects = ({ checked }) => {
               xs={6}
               item
               className={classes.container}
+              align="center"
             >
               <Box
                 m={1}

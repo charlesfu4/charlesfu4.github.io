@@ -137,13 +137,12 @@ const Resume = ({ checked }) => {
             <Grid
               container
               direction="row"
-              alignContent="center"
-              alignItems="center"
+              align="center"
               wrap="wrap"
               className={classes.container}
               spacing={2}
             >
-              <Grid item xs={4} style={{ textAlign: 'center' }} >
+              <Grid item xs={4} align="center">
                 <Box
                   p={1}
                   width='80%'
@@ -157,10 +156,11 @@ const Resume = ({ checked }) => {
                   </ThemeProvider>
                 </Box>
               </Grid>
-              <Grid item xs={4} style={{ textAlign: 'center' }} >
+              <Grid item xs={4} align="center">
                 <Box
                   p={1}
                   width='80%'
+                  align="center"
                   border={3}
                   borderColor="text.primary"
                   borderRadius={16}
@@ -171,10 +171,11 @@ const Resume = ({ checked }) => {
                   </ThemeProvider>
                 </Box>
               </Grid>
-              <Grid item xs={4} style={{ textAlign: 'center' }} >
+              <Grid item xs={4} align="center">
                 <Box
                   p={1}
                   width='80%'
+                  align="center"
                   border={3}
                   borderColor="text.primary"
                   borderRadius={16}

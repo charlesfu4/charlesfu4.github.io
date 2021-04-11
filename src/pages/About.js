@@ -114,18 +114,18 @@ const About = ({ checked }) => {
           <Fade in={checked} style={{ transitionDelay: '3000ms' }} timeout={3100}>
             <Grid item xs={12} className={null}  style={{ textAlign: 'left' }}>
               <ThemeProvider theme={theme}>
-                <Typography variant="h3">My experience covers Machine Learning, Big Data Analytics, and Web Development.</Typography>
+                <Typography variant="h3">My interests cover Machine Learning, Big Data Analytics, and Web Development.</Typography>
               </ThemeProvider>
             </Grid>
           </Fade>
-          <Fade in={checked} style={{ transitionDelay: '4000ms' }} timeout={3100}>
+          <Fade in={checked} style={{ transitionDelay: '5000ms' }} timeout={3100}>
             <Grid item xs={12} className={null}  style={{ textAlign: 'left' }}>
               <ThemeProvider theme={theme}>
                 <Typography variant="h4">Apart from work,</Typography>
               </ThemeProvider>
             </Grid>
           </Fade>
-          <Fade in={checked} style={{ transitionDelay: '4500ms' }} timeout={3100}>
+          <Fade in={checked} style={{ transitionDelay: '6500ms' }} timeout={3100}>
             <Grid item xs={12} className={null}  style={{ textAlign: 'left' }}>
               <ThemeProvider theme={theme}>
                 <Typography variant="h4">I am a drop coffee brewer, an amature cook who likes to transform different dishes into vegetarian ones, and a fitness lover.</Typography>
