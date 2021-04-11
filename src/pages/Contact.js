@@ -131,7 +131,7 @@ const Contact = ({ checked }) => {
               <Grid item >
                 <MailOutlineIcon
                   className={classes.clickableIcon}
-                  onClick={() =>  window.location.href='mailto:fuchucheng@gmail.com'}
+                  onClick={() =>  window.location.href='mailto:charles@pluss.app'}
                 >
                 </MailOutlineIcon>
               </Grid>

@@ -192,6 +192,22 @@ const Projects = ({ checked }) => {
                 <Grid item className={classes.items} style={{ textAlign: 'left' }} >
                   <Box p={1}>
                     <ThemeProvider theme={theme}>
+                      <Typography variant="h4">Devops with Dockers</Typography>
+                    </ThemeProvider>
+                  </Box>
+                </Grid>
+              </Box>
+              <Box
+                m={1}
+                width='80%'
+                border={3}
+                borderColor="text.primary"
+                borderRadius={16}
+                className={classes.hoverbox}
+              >
+                <Grid item className={classes.items} style={{ textAlign: 'left' }} >
+                  <Box p={1}>
+                    <ThemeProvider theme={theme}>
                       <Typography variant="h4">Full-stack open</Typography>
                     </ThemeProvider>
                   </Box>
