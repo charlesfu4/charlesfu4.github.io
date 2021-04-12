@@ -5,7 +5,7 @@ import Box from '@material-ui/core/Box'
 import Fade from '@material-ui/core/Fade'
 import { makeStyles, createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     minHeight: '70vh',
@@ -23,6 +23,10 @@ const useStyles = makeStyles(() => ({
       color: 'grey',
       cursor: 'pointer'
     },
+  },
+  large: {
+    width: theme.spacing(7),
+    height: theme.spacing(7),
   },
 }))
 const theme = createMuiTheme()
@@ -118,17 +122,24 @@ const About = ({ checked }) => {
               </ThemeProvider>
             </Grid>
           </Fade>
-          <Fade in={checked} style={{ transitionDelay: '5000ms' }} timeout={3100}>
+          <Fade in={checked} style={{ transitionDelay: '4500ms' }} timeout={3100}>
+            <Grid item xs={12} className={null}  style={{ textAlign: 'left' }}>
+              <ThemeProvider theme={theme}>
+                <Typography variant="h3">A person who likes to embrace challenges, think out of the box, spot and solve real-world problems describes me the best.</Typography>
+              </ThemeProvider>
+            </Grid>
+          </Fade>
+          <Fade in={checked} style={{ transitionDelay: '6000ms' }} timeout={3100}>
             <Grid item xs={12} className={null}  style={{ textAlign: 'left' }}>
               <ThemeProvider theme={theme}>
                 <Typography variant="h4">Apart from work,</Typography>
               </ThemeProvider>
             </Grid>
           </Fade>
-          <Fade in={checked} style={{ transitionDelay: '6500ms' }} timeout={3100}>
+          <Fade in={checked} style={{ transitionDelay: '7500ms' }} timeout={3100}>
             <Grid item xs={12} className={null}  style={{ textAlign: 'left' }}>
               <ThemeProvider theme={theme}>
-                <Typography variant="h4">I am a drop coffee brewer, an amature cook who likes to transform different dishes into vegetarian ones, and a fitness lover.</Typography>
+                <Typography variant="h4">I am a drop coffee brewer, an amateur cook enjoying creating vegetarian dishes, a Marvel fan, and a fitness lover.</Typography>
               </ThemeProvider>
             </Grid>
           </Fade>
