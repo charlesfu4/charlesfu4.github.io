@@ -104,28 +104,28 @@ const About = ({ checked }) => {
           <Fade in={checked} style={{ transitionDelay: '1000ms' }} timeout={1400}>
             <Grid item className={null}  style={{ textAlign: 'left' }}>
               <ThemeProvider theme={theme}>
-                <Typography variant="h3">My name is Charles Fu.</Typography>
+                <Typography variant="h4">My name is Charles Fu.</Typography>
               </ThemeProvider>
             </Grid>
           </Fade>
           <Fade in={checked} style={{ transitionDelay: '2000ms' }} timeout={2200}>
             <Grid item xs={12} className={null}  style={{ textAlign: 'left' }}>
               <ThemeProvider theme={theme}>
-                <Typography variant="h3">I am an enthusiast in Data Science and Software Development.</Typography>
+                <Typography variant="h4">I am an enthusiast in Data Science and Software Development.</Typography>
               </ThemeProvider>
             </Grid>
           </Fade>
           <Fade in={checked} style={{ transitionDelay: '3000ms' }} timeout={3100}>
             <Grid item xs={12} className={null}  style={{ textAlign: 'left' }}>
               <ThemeProvider theme={theme}>
-                <Typography variant="h3">My interests cover Machine Learning, Big Data Analytics, and Web Development.</Typography>
+                <Typography variant="h4">My interests cover Machine Learning, Big Data Analytics, and Web Development.</Typography>
               </ThemeProvider>
             </Grid>
           </Fade>
           <Fade in={checked} style={{ transitionDelay: '4500ms' }} timeout={3100}>
             <Grid item xs={12} className={null}  style={{ textAlign: 'left' }}>
               <ThemeProvider theme={theme}>
-                <Typography variant="h3">A person who likes to embrace challenges, think out of the box, spot and solve real-world problems describes me the best.</Typography>
+                <Typography variant="h4">A person who likes to embrace challenges, think out of the box, spot and solve real-world problems describes me the best.</Typography>
               </ThemeProvider>
             </Grid>
           </Fade>
