@@ -31,16 +31,16 @@ const useStyles = makeStyles(() => ({
       fontSize: '1.4rem',
     },
     '@media (min-width:384px)': {
-      fontSize: '2.4rem',
+      fontSize: '1.7rem',
     },
     '@media (min-width:576px)': {
-      fontSize: '2.4rem',
+      fontSize: '2.1rem',
     },
     '@media (min-width:768px)': {
-      fontSize: '3.2rem',
+      fontSize: '3.0rem',
     },
     '@media (min-width:960px)': {
-      fontSize: '4rem',
+      fontSize: '3.8rem',
     },
   },
 }))
