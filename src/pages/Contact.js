@@ -27,20 +27,23 @@ const useStyles = makeStyles(() => ({
       cursor: 'pointer'
     },
     fontSize: '0.8rem',
+    '@media (min-width:192px)': {
+      fontSize: '0.7rem',
+    },
     '@media (min-width:288px)': {
-      fontSize: '1.4rem',
+      fontSize: '1rem',
     },
     '@media (min-width:384px)': {
-      fontSize: '1.7rem',
+      fontSize: '1.6rem',
     },
     '@media (min-width:576px)': {
-      fontSize: '2.1rem',
+      fontSize: '2.0rem',
     },
     '@media (min-width:768px)': {
-      fontSize: '3.0rem',
+      fontSize: '2.4rem',
     },
     '@media (min-width:960px)': {
-      fontSize: '3.8rem',
+      fontSize: '3.0rem',
     },
   },
 }))
@@ -111,7 +114,7 @@ const Contact = ({ checked }) => {
           <Fade in={checked} style={{ transitionDelay: '1000ms' }} timeout={1500}>
             <Grid
               container
-              spacing={5}
+              spacing={3}
               direction="row"
               alignItems="center"
               justify="center"
